@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+  Email List
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="List">
+      <form name="submit-to-google-sheet">
+        <input type="name" name="customer" placeholder="Enter Your name" required>
+        <input type="email" name="email" id=" email" placeholder="Enter Your Email"required>
+        <input type="password" name="Password" id="password" placeholder="Enter Your Password"required>
+        <button type="submit" class="butn">Signup</button>
+        <p>already account ? <a class="sin">Signin</a></p>
+        <p>or</p>
+        <div class="log">
+        <a href="#">Google Email account<i class="fa-brands fa-google"></i></a>
+        <a href="#">github account<i class="fa-brands fa-github"></i></a>
+        <a href="#">Facebook<i class="fa-brands fa-facebook"></i></a>
+      </div>
+      </form>
+    </div>
+  </div>
+  <form name="submit-to-google-sheet">
+    <input name="email" type="email" placeholder="Email" required>
+    <button type="submit">Send</button>
+  </form>
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbywfFDDa8y7QaCUPCktr9_BZHs1HDyt3gVce_7MrRJiWbDTiTLxGEJJXaNVmIgFGyJg/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', respon))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
