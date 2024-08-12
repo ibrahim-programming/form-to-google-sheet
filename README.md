@@ -1,4 +1,4 @@
-# Submit a Form to Google Sheets | [Demo](https://form-to-google-sheets.surge.sh)
+# Submit a Form to Google Sheets 
 
 #### How to create an HTML form that stores the submitted form data in Google Sheets using plain 'ol JavaScript (ES6), [Google Apps Script](https://developers.google.com/apps-script/), [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) and [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData).
 
